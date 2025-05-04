@@ -32,7 +32,7 @@ export const users: User[] = [
   },
 ];
 
-export const loginUser = (user: User) => {
+export const addUser = (user: User) => {
   // Look for existing user
   const existingUser = users.find((u) => u.email === user.email && u.password === user.password)
 
@@ -46,7 +46,7 @@ export const findUser = (id: string) => {
 };
 
 export const findUserByEmailPassword = (email: string, password: string) => {
-
+  return users.find((u) => u.email === email && u.password === password)
 };
 
 export const deleteUser = (id: string) => {
